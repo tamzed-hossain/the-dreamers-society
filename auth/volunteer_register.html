@@ -44,7 +44,7 @@
       <h4 class="fw-bold">Volunteer Sign Up</h4>
       <p class="text-muted small">Join the mission and make an impact</p>
     </div>
-    <form method="POST" action="#">
+    <form onsubmit="registerVolunteer(event)">
       <div class="mb-3">
         <label for="fullName" class="form-label">Full Name</label>
         <input type="text" id="fullName" name="name" class="form-control" required placeholder="Your full name">
@@ -69,6 +69,40 @@
       Already a volunteer? <a href="volunteer-login.html" class="text-decoration-none">Log in here</a>
     </p>
   </div>
+
+  <script>
+    function registerVolunteer(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const password = document.getElementById("password").value;
+
+      const newVolunteer = {
+        name,
+        email,
+        phone,
+        password,
+        role: "volunteer",
+        isApproved: false
+      };
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+
+      const exists = users.some(user => user.email === email);
+      if (exists) {
+        alert("A volunteer with this email already exists!");
+        return;
+      }
+
+      users.push(newVolunteer);
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Registration successful! Please wait for admin approval.");
+      window.location.href = "volunteer-login.html";
+    }
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

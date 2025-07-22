@@ -112,54 +112,91 @@
     </style>
 </head>
 <body>
-    <!-- Navigation - Matches Index Theme -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/image/logo.jpg" alt="The Dreamers Society" height="60">
-                <span class="ms-2 d-none d-lg-inline">The Dreamers Society</span>
+ <!-- ======= Navbar ======= -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: #ffffffee;">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 600; color: #333;">
+        <img src="assets/image/logo.jpg" alt="The Dreamers Society Logo" height="80" class="me-2 rounded shadow-sm" style="border: 2px solid #e9c46a;">
+        <span class="d-none d-lg-inline" style="font-size: 1.25rem;">The Dreamers Society</span>
+      </a>
+
+      <!-- Toggler Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html" style="color: #444;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" style="color: #444;">Our Story</a></li>
+
+          <!-- Projects Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" style="color: #444;">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projects.html">All Projects</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="projects.html#eid-gifts">Eid Gifts</a></li>
+              <li><a class="dropdown-item" href="projects.html#zakat">Zakat Fund</a></li>
+              <li><a class="dropdown-item" href="projects.html#tree">Tree Fund</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="volunteer.html" style="color: #444;">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" style="color: #444;">Contact</a></li>
+
+<!-- Donate Now Button -->
+<li class="nav-item ms-lg-3">
+  <a class="btn px-3" href="donate.html"
+     style="background-color: #fdd835; color: #000; font-weight: 600; border-radius: 8px; transition: all 0.3s ease;"
+     onmouseover="this.style.backgroundColor='#fbc02d'; this.style.color='#fff';"
+     onmouseout="this.style.backgroundColor='#fdd835'; this.style.color='#000';">
+    Donate Now
+  </a>
+</li>
+
+
+          <!-- Account Dropdown -->
+          <li class="nav-item dropdown ms-lg-2">
+            <a class="btn btn-outline-dark px-3 dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-user me-1"></i> Account
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="about.html">Our Story</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown">
-                            Projects
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="projects.html">All Projects</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="projects.html#eid-gifts">Eid Gifts</a></li>
-                            <li><a class="dropdown-item" href="projects.html#zakat">Zakat Fund</a></li>
-                            <li><a class="dropdown-item" href="projects.html#tree">Tree Fund</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="volunteer.html">Volunteer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-warning px-3" href="donate.html">Donate Now</a>
-                    </li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-outline-light px-3" href="dashboard.html">
-                            <i class="fas fa-user me-1"></i> Account
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="auth/admin-login.html">Admin Login</a></li>
+              <li><a class="dropdown-item" href="auth/volunteer-login.html">Volunteer Login</a></li>
+              <li><a class="dropdown-item" href="auth/donor-login.html">Donor Login</a></li>
+            </ul>
+          </li>
+
+          <!-- Sign Up Dropdown -->
+          <li class="nav-item dropdown ms-lg-2">
+            <a class="btn btn-outline-dark px-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-user-plus me-1"></i> Sign Up
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="volunteer.html">Volunteer Sign Up</a></li>
+              <li><a class="dropdown-item" href="auth/donor_register.html">Donor Sign Up</a></li>
+            </ul>
+          </li>
+
+          <!-- Dashboard Dropdown -->
+          <li class="nav-item dropdown ms-lg-2">
+            <a class="btn btn-outline-dark px-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-tachometer-alt me-1"></i> Dashboard
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="volunteer/volunteer_dashboard.html">Volunteer Dashboard</a></li>
+              <li><a class="dropdown-item" href="dashboard.html">Donor Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin/index.html">Admin Dashboard</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ======= End Navbar ======= -->
 
     <!-- Page Header -->
     <header class="page-header text-white">
@@ -483,56 +520,63 @@
         </div>
     </section>
 
-<footer class="bg-dark text-white pt-5 pb-4">
+<!-- ======= Footer ======= -->
+<footer style="background-color: #1a1a1a; padding: 40px 0;">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-3 mb-4">
-        <img src="assets/image/logo_with_tagline.jpg" alt="The Dreamers Society" height="100" class="mb-3"/>
-        <p>Empowering dreams, changing lives since 2024</p>
-        <div class="social-icons">
-          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+    <div class="row text-white">
+      <!-- Logo & About -->
+      <div class="col-md-3 mb-4">
+        <img src="assets/image/logo.jpg" alt="The Dreamers Society Logo" style="max-width: 150px; border: 2px solid #d4a373; background-color: #fff5ef;">
+        <p style="margin-top: 10px; color: #f0f0f0;">Empowering dreams, changing lives since 2024</p>
+        <div class="social-icons mt-3">
+          <a href="#" style="margin-right: 10px; color: #f0f0f0; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" style="margin-right: 10px; color: #f0f0f0; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="margin-right: 10px; color: #f0f0f0; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="color: #f0f0f0; font-size: 20px;"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-      <div class="col-lg-3 mb-4">
-        <h5 class="fw-bold mb-3">Quick Links</h5>
+
+      <!-- Quick Links -->
+      <div class="col-md-3 mb-4">
+        <h5 style="color: #f3c995;">Quick Links</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
-          <li class="mb-2"><a href="about.html" class="text-white">Our Story</a></li>
-          <li class="mb-2"><a href="projects.html" class="text-white">Projects</a></li>
-          <li class="mb-2"><a href="volunteer.html" class="text-white">Volunteer</a></li>
-          <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
+          <li><a href="index.html" style="color: #f0f0f0; text-decoration: none;">Home</a></li>
+          <li><a href="about.html" style="color: #f0f0f0; text-decoration: none;">Our Story</a></li>
+          <li><a href="projects.html" style="color: #f0f0f0; text-decoration: none;">Projects</a></li>
+          <li><a href="volunteer.html" style="color: #f0f0f0; text-decoration: none;">Volunteer</a></li>
+          <li><a href="contact.html" style="color: #f0f0f0; text-decoration: none;">Contact</a></li>
         </ul>
       </div>
-      <div class="col-lg-3 mb-4">
-        <h5 class="fw-bold mb-3">Legal</h5>
+
+      <!-- Legal -->
+      <div class="col-md-3 mb-4">
+        <h5 style="color: #f3c995;">Legal</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="#" class="text-white">Privacy Policy</a></li>
-          <li class="mb-2"><a href="#" class="text-white">Terms of Service</a></li>
+          <li><a href="#" style="color: #f0f0f0; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="#" style="color: #f0f0f0; text-decoration: none;">Terms of Service</a></li>
         </ul>
       </div>
-      <div class="col-lg-3 mb-4">
-        <h5 class="fw-bold mb-3">Contact Us</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Tangail, Dhaka</li>
-          <li class="mb-2"><i class="fas fa-phone me-2"></i> 01945185198</li>
-          <li class="mb-2"><i class="fas fa-envelope me-2"></i> thedreamerssociety22@gmail.com</li>
+
+      <!-- Contact -->
+      <div class="col-md-3 mb-4">
+        <h5 style="color: #f3c995;">Contact Us</h5>
+        <ul class="list-unstyled" style="color: #f0f0f0;">
+          <li><i class="fas fa-map-marker-alt me-2"></i> Tangail, Dhaka</li>
+          <li><i class="fas fa-phone me-2"></i> 01945185198</li>
+          <li><i class="fas fa-envelope me-2"></i> thedreamerssociety22@gmail.com</li>
         </ul>
       </div>
     </div>
-    <hr class="my-4"/>
-    <div class="row">
-      <div class="col-md-6 text-center text-md-start">
-        <p class="mb-0">&copy; 2025 The Dreamers Society. All rights reserved.</p>
-      </div>
-      <div class="col-md-6 text-center text-md-end">
-        <p class="mb-0">Registered nonprofit organization</p>
-      </div>
-    </div>
+    
+    <hr style="border-top: 1px solid #444;">
+    <p class="small mt-1 text-center" style="color: #f0f0f0;">
+      © 2025 <strong style="color: #f3c995;">The Dreamers Society</strong>. All rights reserved.<br>
+      Developed by <a href="#" style="color: #f3c995;">Siam</a>
+    </p>
   </div>
 </footer>
+<!-- ======= End Footer ======= -->
+
 
 
     <!-- Bootstrap JS -->

@@ -11,28 +11,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Font Awesome 6 Free CDN -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  rel="stylesheet"
+/>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top">
+<!-- ======= Navbar ======= -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: #ffffffee;">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/image/logo.jpg" alt="The Dreamers Society Logo" height="120">
-        <span class="ms-2 d-none d-lg-inline">The Dreamers Society</span>
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 600; color: #333;">
+        <img src="assets/image/logo.jpg" alt="The Dreamers Society Logo" height="80" class="me-2 rounded shadow-sm" style="border: 2px solid #e9c46a;">
+        <span class="d-none d-lg-inline" style="font-size: 1.25rem;">The Dreamers Society</span>
       </a>
+
+      <!-- Toggler Button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html" style="color: #444;">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" style="color: #444;">Our Story</a></li>
+
+          <!-- Projects Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown">Projects</a>
-            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" style="color: #444;">Projects</a>
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="projects.html">All Projects</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="projects.html#eid-gifts">Eid Gifts</a></li>
@@ -40,14 +53,60 @@
               <li><a class="dropdown-item" href="projects.html#tree">Tree Fund</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-3"><a class="btn btn-warning px-3" href="donate.html">Donate Now</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-outline-light px-3" href="dashboard.html"><i class="fas fa-user me-1"></i> Account</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="volunteer.html" style="color: #444;">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" style="color: #444;">Contact</a></li>
+
+<!-- Donate Now Button -->
+<li class="nav-item ms-lg-3">
+  <a class="btn px-3" href="donate.html"
+     style="background-color: #fdd835; color: #000; font-weight: 600; border-radius: 8px; transition: all 0.3s ease;"
+     onmouseover="this.style.backgroundColor='#fbc02d'; this.style.color='#fff';"
+     onmouseout="this.style.backgroundColor='#fdd835'; this.style.color='#000';">
+    Donate Now
+  </a>
+</li>
+
+
+          <!-- Account Dropdown -->
+          <li class="nav-item dropdown ms-lg-2">
+            <a class="btn btn-outline-dark px-3 dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-user me-1"></i> Account
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="auth/admin-login.html">Admin Login</a></li>
+              <li><a class="dropdown-item" href="auth/volunteer-login.html">Volunteer Login</a></li>
+              <li><a class="dropdown-item" href="auth/donor-login.html">Donor Login</a></li>
+            </ul>
+          </li>
+
+          <!-- Sign Up Dropdown -->
+          <li class="nav-item dropdown ms-lg-2">
+            <a class="btn btn-outline-dark px-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-user-plus me-1"></i> Sign Up
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="volunteer.html">Volunteer Sign Up</a></li>
+              <li><a class="dropdown-item" href="auth/donor_register.html">Donor Sign Up</a></li>
+            </ul>
+          </li>
+
+          <!-- Dashboard Dropdown -->
+          <li class="nav-item dropdown ms-lg-2">
+            <a class="btn btn-outline-dark px-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-tachometer-alt me-1"></i> Dashboard
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="volunteer/volunteer_dashboard.html">Volunteer Dashboard</a></li>
+              <li><a class="dropdown-item" href="dashboard.html">Donor Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin/index.html">Admin Dashboard</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- ======= End Navbar ======= -->
 
 <body>
 
@@ -72,152 +131,330 @@
 </body>
 
 
-
-  <section class="mission-section py-5">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 mb-4 mb-lg-0"><img src="assets/image/mission_Smile.jpg" alt="Our Mission in action" class="img-fluid rounded shadow"></div>
-        <div class="col-lg-6">
-          <h2 class="fw-bold mb-4">Our Mission & Vision</h2>
-          <p class="lead">To create a world where everyone can smile, supported by the power of community action.</p>
-          <p>We believe in the power of collective action to bring positive, sustainable change to our communities. From providing essential aid to fostering environmental stewardship, every project is a step towards a brighter future for all.</p>
-          <div class="d-flex gap-3 mt-4"><a href="about.html" class="btn btn-outline-primary">Learn More</a><a href="projects.html" class="btn btn-primary">See Our Projects</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="impact-counter" class="impact-counter py-5">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-3"><i class="fas fa-gift fa-2x mb-2"></i><h3 class="counter-value" data-target="20">0</h3><p>Smiles Delivered</p></div>
-        <div class="col-md-3"><i class="fas fa-users fa-2x mb-2"></i><h3 class="counter-value" data-target="4">0</h3><p>Families Supported</p></div>
-        <div class="col-md-3"><i class="fas fa-tree fa-2x mb-2"></i><h3 class="counter-value" data-target="2">0</h3><p>Trees Planted</p></div>
-        <div class="col-md-3"><i class="fas fa-hand-holding-heart fa-2x mb-2"></i><h3 class="counter-value" data-target="8">0</h3><p>Volunteers</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="featured-projects" class="featured-projects py-5 bg-light">
-    <div class="container">
-      <div class="section-header text-center mb-5">
-        <h2 class="fw-bold">Featured Campaigns</h2>
-        <p class="lead">Help us make these dreams a reality.</p>
-      </div>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm project-card">
-            <img src="assets/image/event_1_eid_ul_fitor.jpg" class="card-img-top" alt="Eid gifts">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Bring Joy This Eid-ul-Fitr</h5>
-              <p class="card-text">Help us bring joy to children this Eid. Time is running out!</p>
-              <div id="countdown-timer">
-                <div><span id="days">0</span><small>Days</small></div>
-                <div><span id="hours">0</span><small>Hours</small></div>
-                <div><span id="minutes">0</span><small>Mins</small></div>
-                <div><span id="seconds">0</span><small>Secs</small></div>
-              </div>
-              <div class="progress my-3"><div class="progress-bar bg-success" style="width: 10%"></div></div>
-              <p class="small text-muted mb-2">৳500 raised of ৳5000 goal</p>
-              <a href="donate.html?project=eid-fitr" class="btn btn-primary w-100 mt-auto">Gift a Smile</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm project-card">
-            <img src="assets/image/event_3_eid_ul_azha.jpg" class="card-img-top" alt="Eid meat sharing">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Share the Feast of Eid-ul-Azha</h5>
-              <p class="card-text">Provide essentials for underprivileged families to cook and celebrate.</p>
-                         <div id="countdown-timer">
-                <div><span id="days">0</span><small>Days</small></div>
-                <div><span id="hours">0</span><small>Hours</small></div>
-                <div><span id="minutes">0</span><small>Mins</small></div>
-                <div><span id="seconds">0</span><small>Secs</small></div>
-              </div>
-              <div class="progress my-3" style="height:38px; visibility:hidden;"></div><div class="progress my-3"><div class="progress-bar bg-info" style="width: 8%"></div></div>
-              <p class="small text-muted mb-2">৳800 raised of ৳10000 goal</p>
-              <a href="donate.html?project=eid-azha" class="btn btn-primary w-100 mt-auto">Share a Meal</a>
-            </div>
-          </div>
-        </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="donation-tiers py-5">
-    <div class="container">
-      <div class="section-header text-center mb-5">
-        <h2 class="fw-bold">Your Gift in Action</h2>
-        <p class="lead">See the direct impact your generosity can have.</p>
-      </div>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-3"><div class="card text-center h-100 shadow-sm"><div class="card-body py-4"><h3 class="fw-bold" style="color: var(--primary);">৳500</h3><p class="mb-3">Provides a complete Eid gift package for one child.</p><a href="donate.html?amount=500" class="btn btn-outline-primary">Gift ৳500</a></div></div></div>
-        <div class="col-md-6 col-lg-3"><div class="card text-center h-100 shadow-sm"><div class="card-body py-4"><h3 class="fw-bold" style="color: var(--primary);">৳1,000</h3><p class="mb-3">Supplies cooking essentials for a family during Eid.</p><a href="donate.html?amount=1000" class="btn btn-outline-primary">Gift ৳1,000</a></div></div></div>
-        <div class="col-md-6 col-lg-3"><div class="card text-center h-100 shadow-sm"><div class="card-body py-4"><h3 class="fw-bold" style="color: var(--primary);">৳2,500</h3><p class="mb-3">Funds the planting and care of five fruit-bearing trees.</p><a href="donate.html?amount=2500" class="btn btn-outline-primary">Gift ৳2,500</a></div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials py-5"><div class="container"><div class="section-header text-center mb-5"><h2 class="fw-bold">Our Team</h2><p class="lead">Nothing would be possible without our dedicated team</p></div><div class="row"><div class="col-lg-8 mx-auto"><div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner">
-  <div class="carousel-item active"><div class="testimonial-item text-center p-4 rounded shadow"><img src="assets/image/team_photo.jpg" class="rounded-circle mb-3 object-fit-cover" width="100" height="100" alt="The Dreamers Society Team"><p class="mb-4">"The goal is to create a better society for all"</p><h5 class="mb-1">Our Team</h5><p class="text-muted">Dream Makers</p></div></div>
-  <div class="carousel-item"><div class="testimonial-item text-center p-4 rounded shadow"><img src="assets/image/siam.JPG" class="rounded-circle mb-3 object-fit-cover" width="100" height="100" alt="Siam, Treasurer"><p class="mb-4">"A diligent treasurer promotes transparency, trust, and fiscal responsibility."</p><h5 class="mb-1">Siam</h5><p class="text-muted">Treasurer</p></div></div>
-  <div class="carousel-item"><div class="testimonial-item text-center p-4 rounded shadow"><img src="assets/image/nasir_direcctor.jpg" class="rounded-circle mb-3 object-fit-cover" width="100" height="100" alt="Nasir, Team Director"><p class="mb-4">"A director balances strategy and stewardship, ensuring progress with purpose"</p><h5 class="mb-1">Nasir</h5><p class="text-muted">Team Director</p></div></div>
-  </div><button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Prev</span></button><button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></button></div></div></div></div></section>
-    
- <footer class="bg-dark text-white pt-5 pb-4">
+ <!-- mission and vision -->
+<section class="mission-section py-5 pastel-bg">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-3 mb-4">
-        <img src="assets/image/logo.jpg" alt="The Dreamers Society" height="100" class="mb-3"/>
-        <p>Empowering dreams, changing lives since 2024</p>
-        <div class="social-icons">
-          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+    <div class="row align-items-center g-4">
+
+      <!-- Image (Smaller height, not cropped) -->
+      <div class="col-lg-6">
+        <img src="assets/image/mission_Smile.jpg" alt="Smiling child" class="img-fluid rounded-4 shadow-sm" style="max-height: 300px; width: 100%; object-fit: contain;">
+      </div>
+
+      <!-- Text -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h2 class="fw-bold text-primary mb-3">Our Mission</h2>
+        <p class="lead mb-2">Our dream is simple — everyone deserves to smile.</p>
+        <p class="text-muted small">We create change through kindness, one project at a time.</p>
+
+        <div class="mt-3 d-flex gap-3 justify-content-center justify-content-lg-start">
+          <a href="about.html" class="btn btn-outline-primary rounded-pill px-4">Learn More</a>
+          <a href="projects.html" class="btn btn-primary rounded-pill px-4">See Projects</a>
         </div>
       </div>
-      <div class="col-lg-3 mb-4">
-        <h5 class="fw-bold mb-3">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
-          <li class="mb-2"><a href="about.html" class="text-white">Our Story</a></li>
-          <li class="mb-2"><a href="projects.html" class="text-white">Projects</a></li>
-          <li class="mb-2"><a href="volunteer.html" class="text-white">Volunteer</a></li>
-          <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
-        </ul>
+
+    </div>
+  </div>
+</section>
+
+
+ <!-- mission and vision end -->
+
+ <!-- ============================= -->
+<!-- 🌟 Impact Counter Section START -->
+<!-- ============================= -->
+
+<section id="impact-counter" class="impact-counter py-4 pastel-bg">
+  <div class="container">
+    <div class="row g-3 text-center justify-content-center">
+
+      <!-- Impact Card 1 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+          <i class="fas fa-gift fa-2x text-success mb-2"></i>
+          <h3 class="counter-value mb-0" data-target="20">0</h3>
+          <p class="small text-muted">Smiles Delivered</p>
+        </div>
       </div>
-      <div class="col-lg-3 mb-4">
-        <h5 class="fw-bold mb-3">Legal</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="#" class="text-white">Privacy Policy</a></li>
-          <li class="mb-2"><a href="#" class="text-white">Terms of Service</a></li>
-        </ul>
+
+      <!-- Impact Card 2 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+          <i class="fas fa-users fa-2x text-info mb-2"></i>
+          <h3 class="counter-value mb-0" data-target="4">0</h3>
+          <p class="small text-muted">Families Supported</p>
+        </div>
       </div>
-      <div class="col-lg-3 mb-4">
-        <h5 class="fw-bold mb-3">Contact Us</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Tangail, Dhaka</li>
-          <li class="mb-2"><i class="fas fa-phone me-2"></i> 01945185198</li>
-          <li class="mb-2"><i class="fas fa-envelope me-2"></i> thedreamerssociety22@gmail.com</li>
-        </ul>
+
+      <!-- Impact Card 3 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+          <i class="fas fa-tree fa-2x text-success mb-2"></i>
+          <h3 class="counter-value mb-0" data-target="2">0</h3>
+          <p class="small text-muted">Trees Planted</p>
+        </div>
+      </div>
+
+      <!-- Impact Card 4 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm rounded-4 p-3 h-100">
+          <i class="fas fa-hand-holding-heart fa-2x text-danger mb-2"></i>
+          <h3 class="counter-value mb-0" data-target="8">0</h3>
+          <p class="small text-muted">Volunteers</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================= -->
+<!-- 🌟 Impact Counter Section END -->
+<!-- ============================= -->
+
+
+
+ <!-- ==================== Featured Campaigns Section ==================== -->
+<section id="featured-projects" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-primary">✨ Featured Campaigns</h2>
+      <p class="lead text-muted">Support a dream. Spark a smile.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <div class="position-relative">
+            <img src="assets/image/event_1_eid_ul_fitor.jpg" class="card-img-top rounded-top-4" alt="Eid gifts" style="height: 180px; object-fit: cover;">
+            <span class="position-absolute top-0 start-0 bg-success text-white px-3 py-1 rounded-end-pill m-2 small">Active</span>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold mb-2">🎁 Bring Joy This Eid-ul-Fitr</h5>
+            <p class="text-muted small mb-3">Deliver smiles to children with Eid gifts.</p>
+
+            <div class="d-flex justify-content-between text-center small text-muted mb-2">
+              <div><span class="fw-bold days">0</span><div>Days</div></div>
+              <div><span class="fw-bold hours">0</span><div>Hours</div></div>
+              <div><span class="fw-bold minutes">0</span><div>Mins</div></div>
+              <div><span class="fw-bold seconds">0</span><div>Secs</div></div>
+            </div>
+
+            <div class="progress mb-2" style="height: 6px;">
+              <div class="progress-bar bg-success" style="width: 10%;"></div>
+            </div>
+            <div class="d-flex justify-content-between mb-3 small text-muted">
+              <span>৳500 raised</span>
+              <span>৳5000 goal</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="badge bg-success">Eid</span>
+              <a href="donate.html?project=eid-fitr" class="btn btn-sm btn-outline-primary rounded-pill">Donate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card shadow-sm border-0 rounded-4 h-100">
+          <div class="position-relative">
+            <img src="assets/image/event_3_eid_ul_azha.jpg" class="card-img-top rounded-top-4" alt="Eid meat sharing" style="height: 180px; object-fit: cover;">
+            <span class="position-absolute top-0 start-0 bg-success text-white px-3 py-1 rounded-end-pill m-2 small">Active</span>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-semibold mb-2">🍖 Share the Feast of Eid-ul-Azha</h5>
+            <p class="text-muted small mb-3">Help families celebrate Eid with dignity.</p>
+
+            <div class="d-flex justify-content-between text-center small text-muted mb-2">
+              <div><span class="fw-bold days">0</span><div>Days</div></div>
+              <div><span class="fw-bold hours">0</span><div>Hours</div></div>
+              <div><span class="fw-bold minutes">0</span><div>Mins</div></div>
+              <div><span class="fw-bold seconds">0</span><div>Secs</div></div>
+            </div>
+
+            <div class="progress mb-2" style="height: 6px;">
+              <div class="progress-bar bg-info" style="width: 40%;"></div>
+            </div>
+            <div class="d-flex justify-content-between mb-3 small text-muted">
+              <span>৳4000 raised</span>
+              <span>৳10000 goal</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+              <span class="badge bg-info">Food</span>
+              <a href="donate.html?project=eid-azha" class="btn btn-sm btn-outline-primary rounded-pill">Donate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ==================== End Featured Campaigns Section ==================== -->
+
+
+
+<!-- ==================== Our Team Section ==================== -->
+<section class="testimonials py-5 bg-light">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="fw-bold text-primary">🌟 Our Team</h2>
+      <p class="lead text-muted">Meet the dedicated dreamers behind our mission.</p>
+    </div>
+
+    <div class="d-none d-md-block">
+      <!-- Desktop Grid Layout -->
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-white h-100">
+            <img src="assets/image/team_photo.jpg" class="rounded-circle shadow-sm mb-3" width="100" height="100" style="object-fit: cover;" alt="Team">
+            <p class="text-muted fst-italic mb-2">“The goal is to create a better society for all.”</p>
+            <h5 class="fw-bold mb-0">The Dreamers</h5>
+            <small class="text-secondary">Founding Team</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-white h-100">
+            <img src="assets/image/siam.JPG" class="rounded-circle shadow-sm mb-3" width="100" height="100" style="object-fit: cover;" alt="Siam">
+            <p class="text-muted fst-italic mb-2">“A diligent treasurer builds trust and transparency.”</p>
+            <h5 class="fw-bold mb-0">Siam</h5>
+            <small class="text-secondary">Treasurer</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-white h-100">
+            <img src="assets/image/nasir_direcctor.jpg" class="rounded-circle shadow-sm mb-3" width="100" height="100" style="object-fit: cover;" alt="Nasir">
+            <p class="text-muted fst-italic mb-2">“A director leads with strategy, empathy, and courage.”</p>
+            <h5 class="fw-bold mb-0">Nasir</h5>
+            <small class="text-secondary">Team Director</small>
+          </div>
+        </div>
       </div>
     </div>
-    <hr class="my-4"/>
-    <div class="row">
-      <div class="col-md-6 text-center text-md-start">
-        <p class="mb-0">&copy; 2025 The Dreamers Society. All rights reserved.</p>
-      </div>
-      <div class="col-md-6 text-center text-md-end">
-        <p class="mb-0">Registered nonprofit organization</p>
+
+    <div class="d-md-none">
+      <!-- Mobile Carousel with Fade -->
+      <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-white">
+              <img src="assets/image/team_photo.jpg" class="rounded-circle shadow-sm mb-3" width="100" height="100" style="object-fit: cover;" alt="Team">
+              <p class="text-muted fst-italic mb-2">“The goal is to create a better society for all.”</p>
+              <h5 class="fw-bold mb-0">The Dreamers</h5>
+              <small class="text-secondary">Founding Team</small>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-white">
+              <img src="assets/image/siam.JPG" class="rounded-circle shadow-sm mb-3" width="100" height="100" style="object-fit: cover;" alt="Siam">
+              <p class="text-muted fst-italic mb-2">“A diligent treasurer builds trust and transparency.”</p>
+              <h5 class="fw-bold mb-0">Siam</h5>
+              <small class="text-secondary">Treasurer</small>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card border-0 shadow-sm rounded-4 p-4 text-center bg-white">
+              <img src="assets/image/nasir_direcctor.jpg" class="rounded-circle shadow-sm mb-3" width="100" height="100" style="object-fit: cover;" alt="Nasir">
+              <p class="text-muted fst-italic mb-2">“A director leads with strategy, empathy, and courage.”</p>
+              <h5 class="fw-bold mb-0">Nasir</h5>
+              <small class="text-secondary">Team Director</small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Dots -->
+        <div class="carousel-indicators mt-3">
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+        </div>
       </div>
     </div>
   </div>
+</section>
+<!-- ==================== End Our Team Section ==================== -->
+
+<!-- ======= Footer ======= -->
+<footer style="background-color: #1a1a1a; padding: 40px 0;">
+  <div class="container">
+    <div class="row text-white">
+      <!-- Logo & About -->
+      <div class="col-md-3 mb-4">
+        <img src="assets/image/logo.jpg" alt="The Dreamers Society Logo" style="max-width: 150px; border: 2px solid #d4a373; background-color: #fff5ef;">
+        <p style="margin-top: 10px; color: #f0f0f0;">Empowering dreams, changing lives since 2024</p>
+        <div class="social-icons mt-3">
+          <a href="#" style="margin-right: 10px; color: #f0f0f0; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" style="margin-right: 10px; color: #f0f0f0; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+          <a href="#" style="margin-right: 10px; color: #f0f0f0; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="color: #f0f0f0; font-size: 20px;"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3 mb-4">
+        <h5 style="color: #f3c995;">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" style="color: #f0f0f0; text-decoration: none;">Home</a></li>
+          <li><a href="about.html" style="color: #f0f0f0; text-decoration: none;">Our Story</a></li>
+          <li><a href="projects.html" style="color: #f0f0f0; text-decoration: none;">Projects</a></li>
+          <li><a href="volunteer.html" style="color: #f0f0f0; text-decoration: none;">Volunteer</a></li>
+          <li><a href="contact.html" style="color: #f0f0f0; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-md-3 mb-4">
+        <h5 style="color: #f3c995;">Legal</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" style="color: #f0f0f0; text-decoration: none;">Privacy Policy</a></li>
+          <li><a href="#" style="color: #f0f0f0; text-decoration: none;">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3 mb-4">
+        <h5 style="color: #f3c995;">Contact Us</h5>
+        <ul class="list-unstyled" style="color: #f0f0f0;">
+          <li><i class="fas fa-map-marker-alt me-2"></i> Tangail, Dhaka</li>
+          <li><i class="fas fa-phone me-2"></i> 01945185198</li>
+          <li><i class="fas fa-envelope me-2"></i> thedreamerssociety22@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    
+    <hr style="border-top: 1px solid #444;">
+    <p class="small mt-1 text-center" style="color: #f0f0f0;">
+      © 2025 <strong style="color: #f3c995;">The Dreamers Society</strong>. All rights reserved.<br>
+      Developed by <a href="#" style="color: #f3c995;">Siam</a>
+    </p>
+  </div>
 </footer>
+<!-- ======= End Footer ======= -->
+
+
+
+
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
